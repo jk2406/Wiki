@@ -1,0 +1,11 @@
+<!-- THIS IS THE INFORMATION TEMPLATE OF ALL PATHS -->
+{% extends "encyclopedia/layout.html" %}
+{% block title %}
+    Encyclopedia
+{% endblock %}
+{%block body%}
+
+{{content|safe}}
+<br/>
+To edit this content <a href="{%url 'edit' %}">click here</a>
+{% endblock %}

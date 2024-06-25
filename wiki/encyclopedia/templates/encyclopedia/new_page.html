@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+{%block body%}
+<form action="{%url 'new_entry'%}" method="get">
+    {%csrf_token %}
+TITLE : 
+<input type="text" name="title_new" placeholder="TYPE HERE"/>
+<br/>
+CONTENT:
+<br/>
+Scroll down for submit button 
+<br/>
+<textarea class="MarkdownContent" name="text_area" rows="99999999999999999"></textarea>
+<input type="submit"/>
+</form>
+{% endblock %}

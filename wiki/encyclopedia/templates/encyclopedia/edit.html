@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+<form action="{%url 'new_entry' %}">
+    <textarea  name="text_area" rows="99999999999999999">{{content}}</textarea>
+    <input type="submit"/>
+</form>
+{% endblock %}
